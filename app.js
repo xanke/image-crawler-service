@@ -5,6 +5,7 @@ const port = process.env.PORT || 9000
 
 async function start(url, {width, height}) {
   const browser = await puppeteer.launch({
+    headless: true,
     args: ['--no-sandbox'],
     defaultViewport: {
       width,
